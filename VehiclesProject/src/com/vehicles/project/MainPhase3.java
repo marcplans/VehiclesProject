@@ -11,19 +11,21 @@ public class MainPhase3 {
 		Scanner userInput = new Scanner(System.in);
 		String vehicleType = HelpersMain.userInputType(userInput);
 		String vehiclePlate = HelpersMain.userInputPlate(userInput, vehicleType,
-			"Enter car plate number: ", "Enter bike plate number: ");
+				"Enter car plate number: ", "Enter bike plate number: ");
 		String vehicleBrand = HelpersMain.userInput(userInput, vehicleType,
-			"Enter car brand: ", "Enter bike brand: ");
+				"Enter car brand: ", "Enter bike brand: ");
 		String vehicleColor = HelpersMain.userInput(userInput, vehicleType,
-			"Enter car color: ", "Enter bike color: ");
+				"Enter car color: ", "Enter bike color: ");
 		String backWheelBrand = HelpersMain.userInput(userInput, vehicleType,
-			"Enter back wheels brand: ", "Enter back wheel brand: ");
-		String backWheelDiameter = HelpersMain.userInputDiameter(userInput,	vehicleType, 
-			"Enter back wheels diameter: ",	"Enter back wheel diameter: ");
+				"Enter back wheels brand: ", "Enter back wheel brand: ");
+		String backWheelDiameter = HelpersMain.userInputDiameter(userInput,
+				vehicleType, "Enter back wheels diameter: ",
+				"Enter back wheel diameter: ");
 		String frontWheelBrand = HelpersMain.userInput(userInput, vehicleType,
-			"Enter front wheels brand: ", "Enter front wheel brand: ");
-		String frontWheelDiameter = HelpersMain.userInputDiameter(userInput, vehicleType, 
-			"Enter front wheels diameter: ", "Enter front wheel diameter: ");
+				"Enter front wheels brand: ", "Enter front wheel brand: ");
+		String frontWheelDiameter = HelpersMain.userInputDiameter(userInput,
+				vehicleType, "Enter front wheels diameter: ",
+				"Enter front wheel diameter: ");
 		userInput.close();
 
 		Vehicle myVehicle = null;
@@ -32,13 +34,13 @@ public class MainPhase3 {
 			myVehicle = new Car(vehiclePlate, vehicleBrand, vehicleColor);
 
 			Wheel rightBackWheel = new Wheel(backWheelBrand,
-				Double.parseDouble(backWheelDiameter));
+					Double.parseDouble(backWheelDiameter));
 			Wheel leftBackWheel = new Wheel(backWheelBrand,
-				Double.parseDouble(backWheelDiameter));
+					Double.parseDouble(backWheelDiameter));
 			Wheel rightFrontWheel = new Wheel(frontWheelBrand,
-				Double.parseDouble(frontWheelDiameter));
+					Double.parseDouble(frontWheelDiameter));
 			Wheel leftFrontWheel = new Wheel(frontWheelBrand,
-				Double.parseDouble(frontWheelDiameter));
+					Double.parseDouble(frontWheelDiameter));
 
 			List<Wheel> backWheels = new ArrayList<Wheel>();
 			backWheels.add(rightBackWheel);
@@ -58,9 +60,9 @@ public class MainPhase3 {
 		if (vehicleType.equals("bike")) {
 			myVehicle = new Bike(vehiclePlate, vehicleBrand, vehicleColor);
 			Wheel frontWheel = new Wheel(frontWheelBrand,
-				Double.parseDouble(frontWheelDiameter));
+					Double.parseDouble(frontWheelDiameter));
 			Wheel backWheel = new Wheel(backWheelBrand,
-				Double.parseDouble(backWheelDiameter));
+					Double.parseDouble(backWheelDiameter));
 			((Bike) myVehicle).addWheels(frontWheel, backWheel);
 		}
 
@@ -70,7 +72,7 @@ public class MainPhase3 {
 			System.out.println(myVehicle);
 			System.out.println("---");
 			System.out.println(
-				"Object type: " + myVehicle.getClass().getSimpleName());
+					"Object type: " + myVehicle.getClass().getSimpleName());
 		}
 	}
 

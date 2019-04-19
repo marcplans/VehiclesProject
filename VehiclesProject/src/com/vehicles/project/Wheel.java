@@ -29,7 +29,7 @@ public class Wheel {
 	// Added equals method to check if both wheels have same brand and diameter.
 	public boolean equals(Wheel otherWheel) {
 		return this.getBrand() == otherWheel.getBrand()
-			&& this.getDiameter() == otherWheel.getDiameter();
+				&& this.getDiameter() == otherWheel.getDiameter();
 	}
 
 }

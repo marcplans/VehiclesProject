@@ -10,31 +10,31 @@ public class MainPhase1 {
 
 		Scanner userInput = new Scanner(System.in);
 		String carPlate = HelpersMain.userInput(userInput,
-			"Enter car plate number: ");
+				"Enter car plate number: ");
 		String carBrand = HelpersMain.userInput(userInput, 
-			"Enter car brand: ");
+				"Enter car brand: ");
 		String carColor = HelpersMain.userInput(userInput, 
-			"Enter car color: ");
+				"Enter car color: ");
 		String backWheelBrand = HelpersMain.userInput(userInput,
-			"Enter back wheels brand: ");
+				"Enter back wheels brand: ");
 		String backWheelDiameter = HelpersMain.userInputNumeric(userInput,
-			"Enter back wheels diameter: ");
+				"Enter back wheels diameter: ");
 		String frontWheelBrand = HelpersMain.userInput(userInput,
-			"Enter front wheels brand: ");
+				"Enter front wheels brand: ");
 		String frontWheelDiameter = HelpersMain.userInputNumeric(userInput,
-			"Enter front wheels diameter: ");
+				"Enter front wheels diameter: ");
 		userInput.close();
 
 		Car myCar = new Car(carPlate, carBrand, carColor);
 
 		Wheel rightBackWheel = new Wheel(backWheelBrand,
-			Double.parseDouble(backWheelDiameter));
+				Double.parseDouble(backWheelDiameter));
 		Wheel leftBackWheel = new Wheel(backWheelBrand,
-			Double.parseDouble(backWheelDiameter));
+				Double.parseDouble(backWheelDiameter));
 		Wheel rightFrontWheel = new Wheel(frontWheelBrand,
-			Double.parseDouble(frontWheelDiameter));
+				Double.parseDouble(frontWheelDiameter));
 		Wheel leftFrontWheel = new Wheel(frontWheelBrand,
-			Double.parseDouble(frontWheelDiameter));
+				Double.parseDouble(frontWheelDiameter));
 
 		List<Wheel> backWheels = new ArrayList<Wheel>();
 		backWheels.add(rightBackWheel);

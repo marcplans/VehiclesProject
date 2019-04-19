@@ -9,7 +9,7 @@ public class Car extends Vehicle {
 	}
 
 	public void addWheels(List<Wheel> frontWheels, List<Wheel> backWheels)
-		throws Exception {
+			throws Exception {
 		addTwoWheels(frontWheels);
 		addTwoWheels(backWheels);
 	}
@@ -18,14 +18,14 @@ public class Car extends Vehicle {
 		if (wheels.size() != 2)
 			// Added exception description message.
 			throw new Exception("Wheel list must have two items!");
-		
+
 		Wheel rightWheel = wheels.get(0);
 		Wheel leftWheel = wheels.get(1);
 
 		if (!rightWheel.equals(leftWheel))
 			// Added exception description message.
 			throw new Exception("Right and left wheels must be equal!");
-				
+
 		this.wheels.add(leftWheel);
 		this.wheels.add(rightWheel);
 	}
@@ -33,13 +33,13 @@ public class Car extends Vehicle {
 	// Override toString method.
 	public String toString() {
 		return "Car plate: " + this.getPlate() 
-			+ "\nCar brand: " + this.getBrand() 
-			+ "\nCar color: " + this.getColor()
-			+ "\nNumber of wheels: " + this.getWheels().size()
-			+ "\nFront wheels brand: " + this.getWheels().get(0).getBrand()
-			+ "\nFront wheels diameter: " + this.getWheels().get(0).getDiameter()
-			+ "\nBack wheels brand: " + this.getWheels().get(2).getBrand() 
-			+ "\nBack wheels diameter: " + this.getWheels().get(2).getDiameter();
+				+ "\nCar brand: " + this.getBrand() 
+				+ "\nCar color: " + this.getColor()
+				+ "\nNumber of wheels: " + this.getWheels().size()
+				+ "\nFront wheels brand: " + this.getWheels().get(0).getBrand()
+				+ "\nFront wheels diameter: " + this.getWheels().get(0).getDiameter()
+				+ "\nBack wheels brand: " + this.getWheels().get(2).getBrand()
+				+ "\nBack wheels diameter: " + this.getWheels().get(2).getDiameter();
 	}
 
 }

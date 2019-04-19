@@ -9,7 +9,7 @@ public class Wheel {
 		this.diameter = diameter;
 	}
 
-	// added getters and setters
+	// Added getters and setters.
 	public final String getBrand() {
 		return brand;
 	}
@@ -26,12 +26,10 @@ public class Wheel {
 		this.diameter = diameter;
 	}
 
-	// added equals method
+	// Added equals method to check if both wheels have same brand and diameter.
 	public boolean equals(Wheel otherWheel) {
-		return this.getBrand() == otherWheel.getBrand() &&
-				this.getDiameter() == otherWheel.getDiameter();	
+		return this.getBrand() == otherWheel.getBrand()
+				&& this.getDiameter() == otherWheel.getDiameter();
 	}
 
-	
-	
 }

@@ -1,7 +1,5 @@
 package com.vehicles.project;
 
-import java.util.List;
-
 public class Bike extends Vehicle {
 
 	public Bike(String plate, String brand, String color) {
@@ -15,14 +13,14 @@ public class Bike extends Vehicle {
 	
 	// Override toString method
 	public String toString() {
-		return "Bike plate: " + this.getPlate() + 
-				"\nBike brand: " + this.getBrand() + 
-				"\nBike color: " + this.getColor() +
-				"\nNumber of wheels: " + this.getWheels().size() +
-				"\nFront wheel brand: " + this.getWheels().get(0).getBrand() +
-				"\nFront wheel diameter: " + this.getWheels().get(0).getDiameter() +
-				"\nBack wheel brand: " + this.getWheels().get(1).getBrand() +
-				"\nBack wheel diameter: " + this.getWheels().get(1).getDiameter();
+		return "Bike plate: " + this.getPlate() 
+			+ "\nBike brand: " + this.getBrand() 
+			+ "\nBike color: " + this.getColor()
+			+ "\nNumber of wheels: " + this.getWheels().size()
+			+ "\nFront wheel brand: " + this.getWheels().get(0).getBrand()
+			+ "\nFront wheel diameter: " + this.getWheels().get(0).getDiameter()
+			+ "\nBack wheel brand: " + this.getWheels().get(1).getBrand()
+			+ "\nBack wheel diameter: " + this.getWheels().get(1).getDiameter();
 	}
 
 }

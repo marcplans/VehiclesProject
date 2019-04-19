@@ -16,7 +16,7 @@ public abstract class Vehicle {
 		this.color = color;
 	}
 
-	// Added getters and setters
+	// Added getters and setters.
 	public final String getPlate() {
 		return plate;
 	}
